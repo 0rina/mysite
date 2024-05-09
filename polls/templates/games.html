@@ -1,4 +1,5 @@
 <!-- games.html -->
+<!-- my_template.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,9 @@
     <h1>Games List</h1>
     <ul>
         {% for game in games %}
-            <li>{{ game }}</li>
+            <li>{{ game.0 }}</li>
         {% endfor %}
     </ul>
 </body>
 </html>
+

@@ -6,11 +6,11 @@ def game_view(request):
         user ="root",
         passwd ="A268@895awq",
         port='3306',
-        database='gamesopinion'
+        database='game_rating'
     )
 
     mycursor=mydb.cursor()
-    mycursor.execute('SELECT * FROM game')
+    mycursor.execute('SELECT game_name FROM game')
     games=mycursor.fetchall()
     mycursor.close()
     mydb.close()
