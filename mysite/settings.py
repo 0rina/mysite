@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,9 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls'
-]
+    'polls.apps.PollsConfig',
+    'rest_framework',
 
+]
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -76,10 +85,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'game_rating',
+        'USER': 'root',
+        'PASSWORD': 'A268@895awq',
+        'HOST': 'localhost',  # Use 'localhost' if the database is on the same machine
+        'PORT': '3306',  # Typically 3306 for MySQL
     }
 }
+
 
 
 # Password validation
