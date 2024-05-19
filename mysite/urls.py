@@ -9,5 +9,6 @@ urlpatterns = [
     path("games/", connector.game_view),
     path("g1/", views.game_list),
     path("g2/", views.games_html),
-
+    path("genre/", views.genre_html),
+    path("platform/", views.platform_html),
 ]

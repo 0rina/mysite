@@ -4,7 +4,7 @@ def game_view(request):
     mydb = mysql.connector.connect(
         host ="localhost",
         user ="root",
-        passwd ="A268@895awq",
+        passwd ="mama21",
         port='3306',
         database='game_rating'
     )

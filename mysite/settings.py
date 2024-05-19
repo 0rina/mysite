@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'game_rating',
         'USER': 'root',
-        'PASSWORD': 'A268@895awq',
+        'PASSWORD': 'mama21',
         'HOST': 'localhost',  # Use 'localhost' if the database is on the same machine
         'PORT': '3306',  # Typically 3306 for MySQL
     }

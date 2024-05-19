@@ -7,4 +7,5 @@ urlpatterns = [
     path('games/', connector.game_view),
     path("g1/", views.game_list),
     path("g2/", views.games_html),
+    path("genre_list", views.genre_html),
 ]
