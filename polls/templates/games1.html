@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% load static %}
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +8,20 @@
     <title>Games List</title>
 </head>
 <body>
+    <script src="{% static 'list_game_opinion.js' %}"></script>
     <h1>Games List</h1>
     <ul>
         {% for game_name in game_names %}
-    <p>{{ game_name.game_name }}</p>
+            <li>
+
+                <button onclick="myFunction('{{ game_name.game_name }}', '{{ forloop.counter }}')">{{ game_name.game_name }}</button>
+                <p id="{{ game_name.game_name }}{{ forloop.counter }}"></p>
+
+            </li>
         {% endfor %}
     </ul>
+
+
+
 </body>
 </html>

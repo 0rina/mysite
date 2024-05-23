@@ -9,5 +9,6 @@ urlpatterns = [
     path("games/", connector.game_view),
     path("g1/", views.game_list),
     path("g2/", views.games_html),
-
+    path('g2/<str:game_name>', views.games_html),
+    #path("g2/home", views.home),
 ]

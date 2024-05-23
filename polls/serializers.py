@@ -36,6 +36,11 @@ class RatingSerializer(serializers.ModelSerializer):
         model = Rating
         fields = '__all__'
 
+class RatingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Rating, Game
+        fields = ''
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
